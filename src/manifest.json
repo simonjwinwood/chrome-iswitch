@@ -2,7 +2,7 @@
 {
   "manifest_version": 2,
 
-  "name": "iswitch - interactively swith tabs",
+  "name": "iswitch - interactively switch tabs",
   "description": "This extension allows interactive tab switching as with emacs.",
   "version": "1.0",
 
