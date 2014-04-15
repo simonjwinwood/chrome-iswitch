@@ -1,0 +1,29 @@
+
+{
+  "manifest_version": 2,
+
+  "name": "iswitch - interactively swith tabs",
+  "description": "This extension allows interactive tab switching as with emacs.",
+  "version": "1.0",
+
+  "permissions": [
+      "tabs"
+  ],
+  "background" : {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts" : [
+      {
+          "matches" : ["<all_urls>"],
+          "css" : ["iswitch.css"],
+          "js" : ["jquery.js", "underscore-min.js", "iswitch.js"]
+      }
+  ],
+  "commands": { 
+      "iswitch": {
+          "description": "Interactively switch tabs",
+          "suggested_key": { "default": "Ctrl+Shift+K" }
+      }
+  }
+}
